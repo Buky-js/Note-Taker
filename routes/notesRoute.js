@@ -5,6 +5,8 @@ const {
     readAndAppend,
     writeToFile,
   } = require('../helpers/fsUtils');
+ 
+
 // GET Route for retrieving all the notes
 notes.get('/', (req, res) => {
     // res.sendFile(path.join(__dirname, '/public/notes.html'));
@@ -30,5 +32,34 @@ notes.post('/', (req, res) => {
     }
 })
 
+// // DELETE route for deleting a note
+// notes.delete('/:id', (req, res) => {
+//     let selectedId = req.params.id;
+//     // console.log(selectedId);
+//     fs.readFile(path.join(__dirname, './db/notes.json'),'utf-8', (err, notes) =>{
+//         // console.log(notes);
+//         if(err){
+//             return console.log(err);
+//         }
+//         let notesArray = JSON.parse(notes);
+
+//         for(let i=0; i<notesArray.length; i++){
+//             if(selectedId == notesArray[i].note_id){
+//                 notesArray.splice(i,1);
+
+//                 fs.writeFile(path.join(__dirname, './db/notes.json'), JSON.stringify(notesArray), (err, data) => {
+//                     if (err){
+//                         return err;
+//                     }
+//                     console.log(notesArray);
+//                     res.json(notesArray);
+//                 })
+//             }
+//         }
+        
+//     })
+    
+  
+// })
 
 module.exports = notes;

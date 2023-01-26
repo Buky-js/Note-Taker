@@ -25,7 +25,7 @@ Run "node server.js" to start then navigate to a browser window to localhost:300
 
 ## URLs
 
-The deployed application can be found [here](https://youtube.com/watch?v=EmqZHZC23E4&si=EnSIkaIECMiOmarE) .
+The deployed application can be found [here](https://shielded-wildwood-89923.herokuapp.com/) .
 
 The URL of the GitHub repository containing the code is: https://github.com/Buky-js/Note-Taker
 
