@@ -9,11 +9,11 @@ const {
     readAndAppend,
     writeToFile,
   } = require('./helpers/fsUtils');
-  
+  const api = require('./route/index.js');
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use('/api', api);
 
 app.use(express.static('public'));
 
@@ -57,7 +57,19 @@ app.post('/api/notes', (req, res) => {
     }
 })
 
+app.delete('/api/notes/:id', (req, res) => {
+    const id = req.params.id;
+    
+    // readFromFile('./db/notes.json').then((data) => {
+    //     let obj = JSON.parse(data);
+    //     res.json(obj)});
+    //     console.log(obj);
+    // for(let i=0; i<obj.length; i++){
+    //     if([i].note_id == id){
 
+    //     }
+    // }
+})
 
 
 
