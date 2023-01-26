@@ -38,14 +38,8 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/index.html'));
 })
 
-// app.delete('/api/notes/:id', (req, res) => {
-//     let selectedId = req.params.id; //Get the id through req.params.id of the object you are going to delete
-//     let deleteObj = notesJSON.find(notesJSON => notesJSON.note_id == selectedId); // As you have only Id of the object, we want to get the entire object from the array. find() will fetch the object from the array whose id is equal to deleteId and assign it to deleteObj.
-//     let deleteIndex = notesJSON.indexOf(deleteObj); //Find the index of the object fetched from the JSON array.
-//     notesJSON.splice(deleteIndex,1); // Splice/ remove the object from the JSON Array.
-//    res.send(deleteObj); // Send the deleted object as response.
-// });
 
+// DELETE route for deleting a note
 app.delete('/api/notes/:id', (req, res) => {
     let selectedId = req.params.id;
     // console.log(selectedId);
@@ -72,15 +66,7 @@ app.delete('/api/notes/:id', (req, res) => {
         
     })
     
-    // readFromFile('./db/notes.json').then((data) => {
-    //     let obj = JSON.parse(data);
-    //     res.json(obj)});
-    //     console.log(obj);
-    // for(let i=0; i<obj.length; i++){
-    //     if([i].note_id == id){
-
-    //     }
-    // }
+  
 })
 
 
